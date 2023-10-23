@@ -1,9 +1,15 @@
 
 const misProductos = [
-    {id: "1", nombre: "Fideos", precio:  450, img: "../public/img/fideos.jpeg", idCategoria: "2" },
-    {id: "2", nombre: "Yerba", precio: 500, img: "../public/img/yerba.jpeg", idCategoria: "2" },
-    {id: "3", nombre: "Arroz", precio: 300, img: "../public/img/arroz.jpeg", idCategoria: "3" },
-    {id: "4", nombre: "Aceite", precio: 900, img: "../public/img/aceite.png", idCategoria: "4" }
+    {id: "1", nombre: "Iphone 14", precio:  450000, img: "../public/img/iphone1.png", idCategoria: "2" },
+    {id: "2", nombre: "Iphone 14", precio:  450000, img: "../public/img/iphone2.png", idCategoria: "2" },
+    {id: "3", nombre: "Iphone 14", precio:  450000, img: "../public/img/iphone3.png", idCategoria: "2" },
+    {id: "4", nombre: "Apple Watch", precio:  450000, img: "../public/img/reloj.png", idCategoria: "3" },
+    {id: "5", nombre: "Apple Watch", precio:  450000, img: "../public/img/reloj2.png", idCategoria: "3" },
+    {id: "6", nombre: "Airpods Pro", precio:  450000, img: "../public/img/airpods.png", idCategoria: "4" },
+    {id: "7", nombre: "Airpods Pro 2", precio:  450000, img: "../public/img/airpods2.png", idCategoria: "4" },
+    {id: "8", nombre: "Headphones Pro", precio:  450000, img: "../public/img/auriculares.png", idCategoria: "4" },
+    {id: "9", nombre: "Apple TV", precio:  450000, img: "../public/img/appleTv.png", idCategoria: "5" },
+    {id: "10", nombre: "Smart TV", precio:  450000, img: "../public/img/tv.png", idCategoria: "5" },
 ];
 
 export const getProductos = () => {
