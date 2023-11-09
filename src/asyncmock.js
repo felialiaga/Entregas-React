@@ -1,15 +1,15 @@
 
 const misProductos = [
-    {id: "1", nombre: "Iphone 14", precio:  450000, img: "../public/img/iphone1.png", idCategoria: "2" },
-    {id: "2", nombre: "Iphone 14", precio:  450000, img: "../public/img/iphone2.png", idCategoria: "2" },
-    {id: "3", nombre: "Iphone 14", precio:  450000, img: "../public/img/iphone3.png", idCategoria: "2" },
-    {id: "4", nombre: "Apple Watch", precio:  450000, img: "../public/img/reloj.png", idCategoria: "3" },
-    {id: "5", nombre: "Apple Watch", precio:  450000, img: "../public/img/reloj2.png", idCategoria: "3" },
-    {id: "6", nombre: "Airpods Pro", precio:  450000, img: "../public/img/airpods.png", idCategoria: "4" },
-    {id: "7", nombre: "Airpods Pro 2", precio:  450000, img: "../public/img/airpods2.png", idCategoria: "4" },
-    {id: "8", nombre: "Headphones Pro", precio:  450000, img: "../public/img/auriculares.png", idCategoria: "4" },
-    {id: "9", nombre: "Apple TV", precio:  450000, img: "../public/img/appleTv.png", idCategoria: "5" },
-    {id: "10", nombre: "Smart TV", precio:  450000, img: "../public/img/tv.png", idCategoria: "5" },
+    {id: "1", nombre: "Iphone 14", precio:  450000, img: "../public/img/iphone1.png", idCategoria: "2", stock: 5 },
+    {id: "2", nombre: "Iphone 14", precio:  450000, img: "../public/img/iphone2.png", idCategoria: "2", stock: 6 },
+    {id: "3", nombre: "Iphone 14", precio:  450000, img: "../public/img/iphone3.png", idCategoria: "2", stock: 9 },
+    {id: "4", nombre: "Apple Watch", precio:  450000, img: "../public/img/reloj.png", idCategoria: "3", stock: 7 },
+    {id: "5", nombre: "Apple Watch", precio:  450000, img: "../public/img/reloj2.png", idCategoria: "3", stock: 4 },
+    {id: "6", nombre: "Airpods Pro", precio:  450000, img: "../public/img/airpods.png", idCategoria: "4", stock: 15 },
+    {id: "7", nombre: "Airpods Pro 2", precio:  450000, img: "../public/img/airpods2.png", idCategoria: "4", stock: 20 },
+    {id: "8", nombre: "Headphones Pro", precio:  450000, img: "../public/img/auriculares.png", idCategoria: "4", stock: 10 },
+    {id: "9", nombre: "Apple TV", precio:  450000, img: "../public/img/appleTv.png", idCategoria: "5", stock: 11 },
+    {id: "10", nombre: "Smart TV", precio:  450000, img: "../public/img/tv.png", idCategoria: "5", stock: 17 },
 ];
 
 export const getProductos = () => {

@@ -1,34 +1,37 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import "./Contador.css";
 
-// El efecto primario de React es renderizar componentes, manipulando el DOM
+const Contador = ({inicial, stock, funcionAgregar}) => {
 
-// Para poder manipular los efectos secundarios de los cambios de estado vamos a usar el Hook que se llama useEffect
+    const [contador, setContador] = useState(inicial);
 
-
-const Contador = () => {
-
-    const [contador, setContador] = useState(1);
-
-    useEffect(() => {
-        document.title = `Contador: ${contador}`;
-    }, [contador]);
-
-    // A useEffect le pasamos dos parametros, el primero una funcion caallback con el comportamiento que queramos y el segundo es un array de dependencias en donde colocamos el estado que queremos vigila. Cuando ese estado cambia ejecuta el callback
+   
 
     const sumar = () => {
-        setContador( contador + 1);
+        if (contador < stock) {
+            setContador(contador + 1)
+        }
     }
 
     const restar = () => {
-        setContador( contador - 1);
+        if (contador > inicial) {
+            setContador( contador - 1);
+        }
     }
 
   return (
-    <div>
-        <button onClick={restar}> - </button>
-        <strong> {contador} </strong>
-        <button onClick={sumar}> + </button>
-    </div>
+    <>
+        <div className="contador">
+            
+            <div className="cantidades">
+                <button onClick={restar} className="btn restar"> - </button>
+                <strong className="cantidad"> {contador} </strong>
+                <button onClick={sumar} className="btn sumar"> + </button>
+            </div>
+            <button onClick={() => funcionAgregar(contador)} className="agregar btn"> Agregar al carrito </button>
+
+        </div>
+    </>
   )
 }
 

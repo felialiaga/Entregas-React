@@ -1,0 +1,47 @@
+.contador{
+    width: 70%;
+    margin: 1rem auto;
+    background-color: rgb(244, 238, 232);
+    border-radius: 14px;
+}
+
+.cantidades{
+    width: 60%;
+    margin: .4rem auto;
+    border-radius: 14px;
+    display: flex;
+}
+
+.btn{
+    padding: .6rem;
+    border-radius: 14px;
+    border: none;
+    background-color: transparent;
+}
+
+.sumar{
+    width: 35%;
+    text-align: center;
+}
+
+.restar{
+    width: 35%;
+    text-align: center;
+}
+
+.cantidad{
+    width: 30%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agregar{
+    width: 60%;
+    border: none;
+}
+
+.btn:hover{
+    background-color: rgb(212, 201, 192);;
+}

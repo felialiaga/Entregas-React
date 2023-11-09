@@ -1,21 +1,3 @@
-img {
-    width: 4rem;
+.carrito {
+    width: 100px;
 }
-
-div{
-    position: relative;
-    padding: .4rem;
-}
-
-.widget {
-    position: absolute;
-    text-align: center;
-    width: 1.3rem;
-    right: .9rem;
-    top: .2rem;
-    background-color: #f00;
-    border-radius: 50%;
-    padding: .1rem;
-    color: #fff;
-}
-

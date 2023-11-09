@@ -1,8 +1,42 @@
 .contenedorItem{
+    padding: .5rem;
     text-align: center;
     border: 1px solid black;
     border-radius: 12px;
-    width: 80%;
-    margin: auto;
+    width: 90%;
+    margin: 25% auto 25% auto;
     background-color: #f2f4f5;
+    display: grid;
+    grid-template-columns: repeat(4 ,auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    'img img nombre precio'
+    'img img des des'
+    'img img contador contador'
+    'img img stock stock'
+    ;
+}
+
+.nombre {
+    grid-area: nombre;
+}
+
+.precio {
+    grid-area: precio;
+}
+
+.img {
+    grid-area: img;
+    width: 300px;
+}
+.descripcion {
+    grid-area: des;
+}
+
+.contador {
+    grid-area: contador;
+}
+
+.stock{
+    grid-area: stock;
 }
