@@ -17,12 +17,12 @@ const Footer = () => {
                 <h4> Contactanos </h4>
 
                 <div className="red">
-                    <i class="fa-solid fa-envelope"></i>
+                    <i className="fa-solid fa-envelope"></i>
                     <p> felialiagaa@gmail.com </p>
                 </div>
 
                 <div className="red">
-                    <i class="fa-solid fa-phone"></i>
+                    <i className="fa-solid fa-phone"></i>
                     <p> 261 460 0533 </p>
                 </div>
 
@@ -44,12 +44,12 @@ const Footer = () => {
                     <h4> Podes encontrarnos en: </h4>
 
                     <div className="ubi">
-                        <i class="fa-solid fa-map-pin"></i>
+                        <i className="fa-solid fa-map-pin"></i>
                         <p> Mendoza Plaza Shoping </p>
                     </div>
 
                     <div className="ubi">
-                        <i class="fa-solid fa-map-pin"></i>
+                        <i className="fa-solid fa-map-pin"></i>
                         <p> Chacras Park Mendoza </p>
                     </div>
                  
@@ -62,17 +62,17 @@ const Footer = () => {
                 <h4>Siguenos en nuestras Redes</h4>
 
                 <div className="red">
-                    <i class="fa-brands fa-instagram"></i>
+                    <i className="fa-brands fa-instagram"></i>
                     <p> feli.aliaga </p>
                 </div>
                 <div className="red">
-                    <i class="fa-brands fa-twitter"></i>
+                    <i className="fa-brands fa-twitter"></i>
                     <p> felialiagaa </p>
                 </div>
             </div>
 
             <div className="footerCopyright">
-                <b> Apple  <i class="fa-regular fa-copyright"></i>  Todos los derechos reservados.</b>
+                <b> Apple  <i className="fa-regular fa-copyright"></i>  Todos los derechos reservados.</b>
             </div>
 
         </footer>
