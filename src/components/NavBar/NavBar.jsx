@@ -12,7 +12,7 @@ const NavBar = () => {
       return (
         <header>
           <Link to="/">
-            <img src="../../../public/apple.png" alt="Logo de Apple" className="logo-apple" />
+            <img src="../apple.png" alt="Logo de Apple" className="logo-apple" />
           </Link>
 
           <nav>
@@ -43,7 +43,6 @@ const NavBar = () => {
             </ul>
           </nav>
 
-          {/* <button className="soy-admin" type="submit" > Soy Admin </button> */}
 
           <CartWidget/>
 
@@ -56,7 +55,7 @@ const NavBar = () => {
      <header>
 
         <Link to="/">
-          <img src="../../../public/apple.png" alt="Logo de Apple" className="logo-apple" />
+          <img src="../apple.png" alt="Logo de Apple" className="logo-apple" />
         </Link>
 
         <NavLink className= 'link' to= '/crear-producto' > Crear Producto </NavLink>

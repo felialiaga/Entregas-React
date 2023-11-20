@@ -7,7 +7,7 @@ const Footer = () => {
             
             <NavLink to= '/' className= 'footerName' >
                 <div className="footerLogo">
-                    <img src="../../public/apple.png" alt="Apple" className='footerImg' />
+                    <img src="../apple.png" alt="Apple" className='footerImg' />
                     <h2 className='footerName' >Apple</h2>
                 </div>
             </NavLink>
