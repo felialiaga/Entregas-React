@@ -5,12 +5,20 @@ const Item = ({id, nombre, precio, stock, img}) => {
   return (
     
         <div className="cardProducto">
-            {/* <span className='avisoStock'>10 en stock</span> */}
-            <img src= {img} />
-            <h3>{nombre} </h3>
-            <b>${precio} </b>
+
+          <div className="cardParteArriba">
+            <img src= {img} className='cardProductoImg' />
+          </div>
+            
+          <div className="cardParteBaja">
+
+            <h3 className='cardProductoNombre' >{nombre} </h3>
+            <b className='cardProductoPrecio' >${precio} </b>
             <Link to={`/item/${id}`} className='detalles'> Ver Detalles </Link>
             <p className='stock'>Stock: {stock} </p>
+            
+          </div>
+
         </div>
 
   )

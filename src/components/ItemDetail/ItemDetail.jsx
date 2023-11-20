@@ -32,7 +32,13 @@ const ItemDetail = ({id, nombre, stock, precio, img}) => {
         <p className='descripcion'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum velit amet a molestiae, unde atque deleniti consequuntur quas repellat ex ipsum tempora dolores labore rem possimus id nihil maiores!</p>
         
       {
-        agregarCantidad > 0 ? (<Link to="/cart"> Terminar Compra </Link>) : <Contador className="contador" inicial={1} stock={stock} funcionAgregar={manejadorCantidad}/>
+        agregarCantidad > 0 
+          ? 
+        (<>
+          <Link to="/cart" className='finalizar-compra' > Terminar Compra </Link>
+          <Link to='/' className='seguir-comprando' > Seguir Comprando </Link>
+        </>)
+          : <Contador className="contador" inicial={1} stock={stock} funcionAgregar={manejadorCantidad}/>
       }
       <p className='stock'>Productos Disponibles: {stock} </p>
 

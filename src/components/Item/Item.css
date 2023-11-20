@@ -2,6 +2,7 @@
     background-color: #e0e1e1;
     border-radius: 14px;
     width: 15rem;
+    height: 20rem;
     margin: 1rem;
     padding: 1rem;
     display: flex;
@@ -12,10 +13,23 @@
 }
 
 .cardProducto img {
-    width: 130px;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     padding: 1rem;
 }
+
+.cardParteArriba {
+    height: 50%;
+}
+
+.cardParteBaja {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    align-items: center;
+} 
 
 .detalles {
     background-color: #76804f;
@@ -26,16 +40,6 @@
     padding: 10px 20px;
     text-decoration: none;
 }
-
-/* .avisoStock{
-    background-color: #e34d55;
-    color: #fafafa;
-    padding: .4rem;
-    border-radius: 10px;
-    position: absolute;
-    top: -2%;
-    right: -2%;
-} */
 
 .stock{
     color: #aaa;

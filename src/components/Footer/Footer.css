@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    width: 100%;
+    background-color: #F4EAE0;
+    height: 24rem;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    'logo nosotros contacto'
+    'logo nosotros contacto'
+    'logo nosotros redes'
+    'derechos derechos derechos'
+    ;
+    margin-top: 40vh;
+}
+
+.footerLogo {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.footerImg {
+    width: 5rem;
+}
+
+.footerName {
+    text-decoration: none;
+    color: #444;
+    grid-area: logo;
+
+}
+
+.footerContacto {
+    grid-area: contacto;
+    padding: .5rem;
+}
+
+.footerNosotros {
+    grid-area: nosotros;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.footerRedes {
+    grid-area: redes;
+    padding: .5rem;
+    border-top: 1px solid #000;
+}
+
+.footerCopyright {
+    grid-area: derechos;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubi, .red {
+    display: flex;
+    border: #444 1px solid;
+    padding: 1rem;
+    margin: .5rem;
+}
+
+i {
+    margin-right: .5rem;
+}
+
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.horarios {
+    color: #444;
+}

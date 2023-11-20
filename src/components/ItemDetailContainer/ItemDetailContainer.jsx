@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import { getAProduct } from "../../asyncmock.js";
 import ItemDetail from "../ItemDetail/ItemDetail.jsx";
 import { useParams } from "react-router-dom";
 import { db } from "../../services/config.js";
@@ -10,11 +9,6 @@ const ItemDetailContainer = () => {
     const [producto, setProducto] = useState(null);
 
     const {idItem} = useParams();
-
-    // useEffect(() => {
-    //     getAProduct(idItem)
-    //         .then(respuesta => setProducto(respuesta))
-    // }, [idItem])
 
     useEffect(() => {
 

@@ -4,7 +4,9 @@
     border: 1px solid black;
     border-radius: 12px;
     width: 90%;
-    margin: 25% auto 25% auto;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #f2f4f5;
     display: grid;
     grid-template-columns: repeat(4 ,auto);
@@ -12,7 +14,7 @@
     grid-template-areas: 
     'img img nombre precio'
     'img img des des'
-    'img img contador contador'
+    'img img contador seguir'
     'img img stock stock'
     ;
 }
@@ -39,4 +41,34 @@
 
 .stock{
     grid-area: stock;
+}
+
+.finalizar-compra {
+    text-decoration: none;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #000;
+    grid-area: contador;
+    width: 60%;
+    font-weight: bold;
+    margin: 1rem auto;
+    padding: .5rem;
+}
+
+.seguir-comprando {
+    text-decoration: none;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #000;
+    grid-area: seguir;
+    width: 60%;
+    font-weight: bold;
+    margin: 1rem auto;
+    padding: .5rem;
 }

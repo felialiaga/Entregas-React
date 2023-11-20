@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import { getProductos, getProductosPorCategoria } from "../../asyncmock.js";
 import ItemList from "../ItemList/ItemList.jsx";
 import { useParams } from "react-router-dom";
 import { db } from "../../services/config.js";
@@ -9,20 +8,12 @@ const ItemListContainer = () => {
 
   const [productos, setProductos] = useState([]);
 
-  const {idCat} = useParams();
+  const { categoria } = useParams();
 
-  // useEffect(() => {
-
-  //   const funcionProductos = idCat ? getProductosPorCategoria : getProductos;
-
-  //   funcionProductos(idCat)
-  //     .then(resp => setProductos(resp))
-
-  // }, [idCat]);
 
   useEffect(() => {
 
-    const misProductos = idCat ? query(collection(db, "productos"), where("idCategoria", "==", "idCat")) : collection(db, "productos");
+    const misProductos = categoria ? query(collection(db, "productos"), where("idCategoria", "==", categoria)) : collection(db, "productos");
 
     getDocs(misProductos)
       .then(res => {
@@ -34,7 +25,7 @@ const ItemListContainer = () => {
       })
 
 
-  }, [idCat]);
+  }, [categoria]);
 
   return (
     

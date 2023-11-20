@@ -1,3 +1,28 @@
-.carrito {
+.carrito-img {
     width: 100px;
+}
+
+.carrito {
+    height: 100%;
+    position: relative;
+    padding: .4rem;
+}
+
+.widget {
+    text-decoration: none;
+}
+
+.cart-widget {
+    background-color: red;
+    color: #fff;
+    width: 5%;
+    height: 5%;
+    padding: .8rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 7%;
+    right: 18%;
 }

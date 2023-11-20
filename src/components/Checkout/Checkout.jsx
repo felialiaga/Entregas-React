@@ -3,6 +3,8 @@ import { CarritoContext } from "../../context/CarritoContext.jsx";
 import { db } from "../../services/config.js";
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore";
 import { useContext } from "react";
+import './Checkout.css';
+import { Link } from "react-router-dom";
 
 
 
@@ -31,8 +33,6 @@ const Checkout = () => {
             return;
         }
 
-        //1) Creamos un objeto con todos los datos de la orden de compra:
-
         const orden = {
             items: carrito.map(producto => ({
                 id: producto.item.id,
@@ -47,11 +47,9 @@ const Checkout = () => {
             email
         }
 
-        //2) Guardar la orden en la base de datos
 
         Promise.all(
             orden.items.map( async productoOrden => {
-                // Por cada producto de la coleccion productos obtengo una referencia y obtengo el DOC
                 const productoRef = doc(db, "productos", productoOrden.id);
                 const productoDoc = await getDoc(productoRef);
 
@@ -64,7 +62,6 @@ const Checkout = () => {
             })
         )
         .then(() => {
-            // Guardamos la orden en la base de datos
 
             addDoc(collection(db, "ordenes"), orden)
                 .then(docRef => {
@@ -83,60 +80,72 @@ const Checkout = () => {
 
 
     return (
-        <div>
+        <div className="checkout" >
 
-            <h2>Checkout</h2>
+            <h2 className="checkout-titulo" >Checkout</h2>
 
             <form onSubmit={manejadorFormulario}>
 
                 {
                     carrito.map(producto => (
-                        <div key={producto.item.id}>
-                            <p> {producto.item.nombre}  x {producto.cantidad} </p>
-                            <p> {producto.item.precio} </p>
+                        <div key={producto.item.id} className="checkout-detalle" >
+                            <p className="checkout-nombre" > <b> {producto.item.nombre} </b>  x {producto.cantidad} </p>
+                            <p className="checkout-precio" >  <b> Total: </b> {producto.item.precio * producto.cantidad } </p>
                             <hr />
                         </div>
                     ))
                 }
 
-                <div>
-                    <label htmlFor=""> Nombre </label>
-                    <input type="text" onChange={e => setNombre(e.target.value)} />
+                <div className="data-checkout" >
+                    <label htmlFor="dato-nombre"> Nombre </label>
+                    <input type="text" id="dato-nombre" className="input-data" onChange={e => setNombre(e.target.value)} />
                 </div>
 
-                <div>
-                    <label htmlFor=""> Apellido </label>
-                    <input type="text" onChange={e => setApellido(e.target.value)} />
+                <div className="data-checkout" >
+                    <label htmlFor="dato-apellido"> Apellido </label>
+                    <input type="text" id="dato-apellido" className="input-data" onChange={e => setApellido(e.target.value)} />
                 </div>
 
-                <div>
-                    <label htmlFor=""> Celular </label>
-                    <input type="text" onChange={e => setTelefono(e.target.value)} />
+                <div className="data-checkout" >
+                    <label htmlFor="dato-celular"> Celular </label>
+                    <input type="text" id="dato-celular" className="input-data" onChange={e => setTelefono(e.target.value)} />
                 </div>
 
-                <div>
-                    <label htmlFor=""> Email </label>
-                    <input type="email" onChange={e => setEmail(e.target.value)} />
+                <div className="data-checkout" >
+                    <label htmlFor="dato-email"> Email </label>
+                    <input type="email" id="dato-email" className="input-data" onChange={e => setEmail(e.target.value)} />
                 </div>
 
-                <div>
-                    <label htmlFor=""> Confirma tu email </label>
-                    <input type="email" onChange={e => setEmailConfirmacion(e.target.value)} />
+                <div className="data-checkout" >
+                    <label htmlFor="dato-email2"> Confirma tu email </label>
+                    <input type="email" id="dato-email2" className="input-data" onChange={e => setEmailConfirmacion(e.target.value)} />
                 </div>
 
-                {
-                    error && <p> {error} </p>
-                }
+                <div className="parte-baja">
+                    {
+                        error && <p className="error"> {error} </p>
+                    }
 
-                <button type="submit"> Confirmar compra </button>
+                    {
+                        !orderId && (
+                            <>
+                                <button type="submit" className="confirmar-compra" > Confirmar compra </button>
+                            </>
+                        )
+                    }
+
+                    {
+                        orderId && (
+                            <>
+                                <strong> Gracias por su compra!! Tu numero de compra es: <p className="numero-orden" > {orderId} </p> </strong>
+                                
+                                <Link to= "/" className="btn-volver" > Volver </Link>
+                            </>
+                        )
+                    }
+
+                </div>
                 
-                {
-                    orderId && (
-                        <>
-                            <strong> Gracias por su compra!! Tu numero de compra es: {orderId} </strong>
-                        </>
-                    )
-                }
 
             </form>
 
