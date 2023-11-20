@@ -3,7 +3,7 @@ Esto es un proyecto sobre un ecommerce de productos. Dentro de la app se pueden 
 
 ## Deploy del Proyecto
 
-- 
+- entregas-react-ajpy8dno0-felialiagaa-gmailcom.vercel.app
 
 ## Tecnologias usadas
 
